@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Lada Nusantara Export</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo">LADA NUSANTARA</div>
+  <nav>
+    <a href="#home">Beranda</a>
+    <a href="#produk">Produk</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Lada Hitam Premium Nusantara</h1>
+  <p>Dari kebun Lampung ke meja mewah Anda</p>
+  <span class="tagline">Lada hitam dari Lampung ke Dunia</span>
+</section>
+
+<section id="produk" class="produk">
+  <h2>Produk Unggulan</h2>
+
+  <div class="produk-grid">
+
+    <!-- CARD 1 -->
+    <div class="card" data-nama="Lada Hitam Grade A" data-harga="500">
+      <div class="img-wrap">
+        <img src="https://i.imgur.com/vQLVnHG.jpeg">
+      </div>
+
+      <h3>Grade A</h3>
+      <p>Aroma kuat, kualitas ekspor</p>
+      <span class="harga">Rp 500 / gram</span>
+
+      <input type="number" class="qty" value="100" min="50" step="50">
+      <div class="total"></div>
+
+      <button onclick="beli(this)">Beli</button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card" data-nama="Lada Hitam Premium" data-harga="700">
+      <div class="img-wrap">
+        <img src="https://i.imgur.com/e2bL6qz.jpeg">
+      </div>
+
+      <h3>Premium</h3>
+      <p>Selected best pepper</p>
+      <span class="harga">Rp 700 / gram</span>
+
+      <input type="number" class="qty" value="100" min="50" step="50">
+      <div class="total"></div>
+
+      <button onclick="beli(this)">Beli</button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card" data-nama="Lada Hitam Luxury" data-harga="1000">
+      <div class="img-wrap">
+        <img src="https://i.imgur.com/vjaTIxh.jpeg">
+      </div>
+
+      <h3>Luxury Export</h3>
+      <p>Kualitas terbaik untuk fine dining</p>
+      <span class="harga">Rp 1000 / gram</span>
+
+      <input type="number" class="qty" value="100" min="50" step="50">
+      <div class="total"></div>
+
+      <button onclick="beli(this)">Beli</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="tentang" class="tentang">
+  <h2>Tentang Brand</h2>
+  <p>
+    Lada hitam premium Nusantara berasal dari kebun terbaik di Lampung.
+    Diproses dengan standar tinggi untuk menghasilkan aroma kuat khas Lampung
+    dan kualitas ekspor kelas dunia.
+  </p>
+</section>
+
+<section id="kontak" class="kontak">
+  <h2>Kontak</h2>
+  <p>Order langsung via WhatsApp untuk respon cepat.</p>
+</section>
+
+<footer>
+  <p>© 2026 Lada Nusantara Export</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
