@@ -3,30 +3,27 @@ header {
   top: 0;
   z-index: 1000;
 
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-
-  border-bottom: 1px solid rgba(216,201,174,0.15);
-  overflow: hidden;
+  position: relative; /* wajib */
+  overflow: hidden;   /* biar efek ga keluar */
 }
 header::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -150%;
-  width: 150%;
+  left: -100%;
+  width: 30%;   /* kecil banget */
   height: 100%;
 
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255, 255, 255, 0.05), /* INI DIKECILIN */
+    rgba(255, 255, 255, 0.03), /*  super tipis */
     transparent
   );
+
+  animation: shine 8s infinite; /* pelan biar elegan */
+  pointer-events: none;
+}
 
   animation: shine 6s infinite; /* diperlambat */
   pointer-events: none;
@@ -244,6 +241,6 @@ footer {
   transform: scale(1.05);
 }
 @keyframes shine {
-  0% { left: -150%; }
-  100% { left: 150%; }
+  0% { left: -100%; }
+  100% { left: 120%; }
 }
