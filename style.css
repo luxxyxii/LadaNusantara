@@ -1,12 +1,18 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top left, rgba(216,201,174,0.15), transparent 40%),
-              radial-gradient(circle at bottom right, rgba(216,201,174,0.1), transparent 40%),
-              #111;
-  color: #eee;
-}
+header {
+  position: sticky;      /* biar nempel */
+  top: 0;
+  z-index: 1000;
 
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(216,201,174,0.2);
+  overflow: hidden;
+}
 /* NAVBAR */
 header {
   display: flex;
@@ -15,7 +21,23 @@ header {
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(20px);
 }
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
 
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+
+  animation: shine 4s infinite;
+}
 .logo {
   font-family: 'Playfair Display', serif;
   font-size: 26px;
