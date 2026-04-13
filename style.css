@@ -1,5 +1,5 @@
 header {
-  position: sticky;      /* biar nempel */
+  position: sticky;
   top: 0;
   z-index: 1000;
 
@@ -10,33 +10,26 @@ header {
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(20px);
 
-  border-bottom: 1px solid rgba(216,201,174,0.2);
+  border-bottom: 1px solid rgba(216,201,174,0.15);
   overflow: hidden;
-}
-/* NAVBAR */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
 }
 header::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 200%;
+  left: -150%;
+  width: 150%;
   height: 100%;
 
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05), /* INI DIKECILIN */
     transparent
   );
 
-  animation: shine 4s infinite;
+  animation: shine 6s infinite; /* diperlambat */
+  pointer-events: none;
 }
 .logo {
   font-family: 'Playfair Display', serif;
@@ -249,4 +242,8 @@ footer {
 .ig-btn:hover {
   box-shadow: 0 0 15px rgba(221, 42, 123, 0.6);
   transform: scale(1.05);
+}
+@keyframes shine {
+  0% { left: -150%; }
+  100% { left: 150%; }
 }
