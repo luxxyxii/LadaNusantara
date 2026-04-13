@@ -37,7 +37,7 @@ Produk: ${nama}
 Jumlah: ${qty} gram
 Total: Rp ${total}`;
 
-  let url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+  let url = `https://api.whatsapp.com/send?phone=${nomor}&text=${encodeURIComponent(pesan)}`;
 
   window.open(url, "_blank");
 }
