@@ -143,3 +143,21 @@ footer {
   padding: 20px;
   background: #222;
 }
+/* TENTANG & KONTAK */
+.tentang, .kontak {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.tentang h2, .kontak h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.tentang p, .kontak p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #ccc;
+}
