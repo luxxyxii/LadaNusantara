@@ -1,33 +1,21 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, rgba(216,201,174,0.15), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(216,201,174,0.1), transparent 40%),
+              #111;
+  color: #eee;
+}
+
+/* NAVBAR */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  position: relative; /* wajib */
-  overflow: hidden;   /* biar efek ga keluar */
-}
-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 30%;   /* kecil banget */
-  height: 100%;
-
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.03), /*  super tipis */
-    transparent
-  );
-
-  animation: shine 8s infinite; /* pelan biar elegan */
-  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
 }
 
-  animation: shine 6s infinite; /* diperlambat */
-  pointer-events: none;
-}
 .logo {
   font-family: 'Playfair Display', serif;
   font-size: 26px;
@@ -239,8 +227,4 @@ footer {
 .ig-btn:hover {
   box-shadow: 0 0 15px rgba(221, 42, 123, 0.6);
   transform: scale(1.05);
-}
-@keyframes shine {
-  0% { left: -100%; }
-  100% { left: 120%; }
 }
