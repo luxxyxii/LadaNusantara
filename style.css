@@ -16,6 +16,19 @@ header {
   backdrop-filter: blur(20px);
 }
 
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  background: linear-gradient(90deg, #D8C9AE, #f5e6c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 10px rgba(216,201,174,0.3);
+}
+
 nav a {
   margin-left: 25px;
   color: #ccc;
