@@ -21,15 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// BELI (WA)
 function beli(btn) {
-  const card = btn.parentElement;
-  const nama = card.dataset.nama;
-  const qty = card.querySelector(".qty").value;
+  let card = btn.closest(".card");
 
-  let pesan = `Halo kak, saya mau beli ${nama} sebanyak ${qty} gram`;
-  let nomor = "6285709594928"; // GANTI NOMOR LU
+  let nama = card.dataset.nama;
+  let harga = parseInt(card.dataset.harga);
+  let qty = card.querySelector(".qty").value;
+
+  let total = harga * qty;
+
+  let nomor = "6285709594928"; // ganti nomor lu
+
+  let pesan = `Halo, saya ingin membeli:
+Produk: ${nama}
+Jumlah: ${qty} gram
+Total: Rp ${total}`;
 
   let url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+
   window.open(url, "_blank");
 }
